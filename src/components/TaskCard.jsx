@@ -22,7 +22,6 @@ export default function TaskCard({ task, setTasks }) {
       : "border-green-500";
 
   const deleteTask = () => {
-    console.log(task.id)
     setTasks(prev => prev.filter(t => t.id !== task.id));
   };
 
@@ -39,10 +38,16 @@ export default function TaskCard({ task, setTasks }) {
     <div
       ref={setNodeRef}
       style={style}
-      {...listeners}
-      {...attributes}
-      className={`bg-gray-50 p-3 rounded-xl shadow border-l-4 ${priorityColor} cursor-grab active:cursor-grabbing`}
+      className={`bg-gray-50 p-3 rounded-xl shadow border-l-4 ${priorityColor}`}
     >
+      <div
+        {...listeners}
+        {...attributes}
+        className="cursor-grab active:cursor-grabbing text-xs text-gray-400 mb-1"
+      >
+        Drag
+      </div>
+
       {editing ? (
         <div className="flex gap-2">
           <input
@@ -67,8 +72,9 @@ export default function TaskCard({ task, setTasks }) {
       )}
 
       <button
+        type="button"
         onClick={deleteTask}
-        className="mt-2 bg-gray-400 text-sm text-red-500 hover:text-red-700"
+        className="mt-2 text-sm text-red-500 hover:text-red-700"
       >
         ✕ Delete
       </button>
