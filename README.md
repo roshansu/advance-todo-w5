@@ -1,16 +1,79 @@
-# React + Vite
+# 🚀 Kanban Task Board (React + Vite + Tailwind + Drag & Drop)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **Trello-like Kanban Task Management Board** built using **React.js**, **Vite**, **TailwindCSS**, and **dnd-kit** for drag-and-drop functionality.
 
-Currently, two official plugins are available:
+This project demonstrates the **React way of thinking** — managing UI through state instead of directly manipulating the DOM.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🧩 Core Functionality
 
-## Expanding the ESLint configuration
+* Add new tasks
+* Delete tasks
+* Move tasks across columns
+* Three workflow columns:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  * To Do
+  * In Progress
+  * Done
+
+### 🎯 Productivity Enhancements
+
+* Edit task inline (click to edit)
+* Task priority system
+
+  * High → Red border
+  * Medium → Yellow border
+  * Low → Green border
+
+### 💾 Persistence
+
+* Tasks saved to **localStorage**
+* Data remains after page refresh
+
+### 🖱️ Drag and Drop
+
+* Smooth drag-and-drop between columns
+* Built using **dnd-kit**
+
+### 🔍 Search & Filter
+
+* Real-time task search
+* Filters tasks by name
+
+### 🎨 Modern UI
+
+* Responsive layout
+* TailwindCSS styling
+* Clean card-based design
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology   | Purpose                      |
+| ------------ | ---------------------------- |
+| React.js     | Component-based UI           |
+| Vite         | Fast development environment |
+| TailwindCSS  | Utility-first styling        |
+| dnd-kit      | Drag and drop system         |
+| localStorage | Client-side persistence      |
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+ ├── components/
+ │     ├── Board.jsx
+ │     ├── Column.jsx
+ │     ├── TaskCard.jsx
+ │     ├── AddTask.jsx
+ │     └── SearchBar.jsx
+ ├── App.jsx
+ ├── main.jsx
+ └── index.css
+```
